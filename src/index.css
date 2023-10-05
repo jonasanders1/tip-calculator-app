@@ -10,10 +10,22 @@
 --Font-size: 24px;
 --Font-regular: 400;
 --Font-bold: 700;
+--Strong-cyan: hsl(172, 67%, 45%)
 }
-
 
 html, body{
   font-family: 'Space Mono', monospace;
   background-color: var(--Light-grayish-cyan);
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
 }

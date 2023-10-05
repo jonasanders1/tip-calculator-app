@@ -1,9 +1,13 @@
 .header__container{
-    
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: end;
 }
-.header__content{
 
-}
 .header-title{
-    
+    color: var(--Dark-grayish-cyan);
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    font-size: 30px;
 }

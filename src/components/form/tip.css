@@ -1,0 +1,28 @@
+/* TIP */
+.tip__content{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+.button__group{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+.input__button{
+    width: 113.66px;
+    border: none;
+    background-color: var(--Very-light-grayish-cyan);
+    font-size: var(--Font-size);
+    text-align: center;
+    font-family: 'Space Mono', monospace;
+    font-weight: var(--Font-bold);
+    outline-color: var(--Strong-cyan);
+    border-radius: .4rem;   
+    color: var(--Strong-cyan);
+}
+.input__button::placeholder {
+    color: var(--Dark-grayish-cyan);
+    opacity: 1; /* Firefox */
+  }
+

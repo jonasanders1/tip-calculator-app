@@ -1,0 +1,30 @@
+
+.calculation__container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* .calculation__category{
+
+} */
+
+.category-title{
+    color: var(--White);
+}
+.person{
+    color: var(--Grayish-cyan);
+}
+
+.calculation__amount{
+    display: flex;
+    font-weight: var(--Font-bold);
+    font-size: 3rem;
+    color: var(--Strong-cyan);
+}
+/* .dollar{
+
+} */
+/* .total-tip{
+    
+} */

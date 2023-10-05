@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap');
+
+.tip-button{
+    flex: 1;
+    height: 50px;
+    background-color: var(--Very-dark-cyan);
+    color: var(--White);
+    border-radius: .4rem;
+    font-size: var(--Font-size);
+    border: none;
+    font-family: 'Space Mono', monospace;
+}
+.tip-button:hover{
+    background-color: var(--Strong-cyan);
+}

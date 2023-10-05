@@ -1,0 +1,27 @@
+.people__content{
+    width: max-content;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+.people__label{
+    font-size: 16px;
+}
+.people__input{
+    padding: 0.5rem 2rem;
+    background-color: var(--Very-light-grayish-cyan);
+    border: none;
+    outline-color: var(--Strong-cyan);
+    border-radius: .5rem;
+    text-align: end;
+    font-size: var(--Font-size);
+    font-family: 'Space Mono', monospace;
+    color: var(--Very-dark-cyan);
+    font-weight: 700;
+}
+.people__label{
+    color: var(--Dark-grayish-cyan);
+}
+.people__container{
+    position: relative;
+}

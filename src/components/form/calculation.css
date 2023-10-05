@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap');
+
+
+.calculation__content{
+    height: 100%;
+    width: 400px;
+    background-color: var(--Very-dark-cyan);
+    border-radius: 1.2rem;
+    padding: 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  
+}
+.reset__button{
+    height: 50px;
+    background-color: var(--Strong-cyan);
+    border-radius: .5rem;
+    border: none;
+    font-size: 1.25rem;
+    font-family: 'Space Mono', monospace;
+    text-transform: uppercase;
+    font-weight: var(--Font-bold);
+    color: var(--Very-dark-cyan);
+}

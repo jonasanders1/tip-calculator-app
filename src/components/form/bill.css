@@ -1,0 +1,33 @@
+/* BILL */
+.bill__content{
+    width: max-content;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+.bill__label{
+    color: var(--Dark-grayish-cyan);
+}
+.bill__input{
+    padding: 0.5rem 2rem;
+    background-color: var(--Very-light-grayish-cyan);
+    border: none;
+    outline-color: var(--Strong-cyan);
+    border-radius: .5rem;
+    text-align: end;
+    font-size: var(--Font-size);
+    font-family: 'Space Mono', monospace;
+    color: var(--Very-dark-cyan);
+    font-weight: 700;
+}
+
+.input__container{
+    position: relative;
+}
+.input-icon{
+    position: absolute;
+    top: 50%;
+    padding-left: 1rem;
+    transform: translateY(-50%);
+    color: var(--Grayish-cyan);
+}
