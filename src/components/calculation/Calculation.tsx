@@ -20,7 +20,6 @@ const Calculation: React.FC<CalculationProps> = ({
   setSelectedPercentage,
   setNumberOfPeople
 }) => {
-  const [percentInDollars, setPercentInDollars] = useState(0)
   const[tipPerPerson, setTipPerPerson] = useState<number | string>(0)
   const[totalPerPerson, setTotalPerPerson] = useState<number | string>(0)
 
