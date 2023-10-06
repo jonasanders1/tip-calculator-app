@@ -11,9 +11,15 @@ function App() {
   const [selectedPercentage, setSelectedPercentage] = useState(0)
   const [numberOfPeople, setNumberOfPeople] = useState(1)
 
+  
 
   return (
     <div className='app'>
+      <div>
+        total bill: (app) {bill} <br />
+        current percentage (app): {selectedPercentage} <br />
+        amount of people: (app) {numberOfPeople}
+      </div>
       <Header/>
       <div className="form">
         <Form 

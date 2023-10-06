@@ -11,15 +11,26 @@ interface CalculationProps{
 
 const Calculation: React.FC<CalculationProps> = ({bill, selectedPercentage, numberOfPeople}) => {
   const [percentInDollars, setPercentInDollars] = useState(0)
-  const[tipPerPerson, setTipPerPerson] = useState(0)
-  const[totalPerPerson, setTotalPerPerson] = useState(1)
+  const[tipPerPerson, setTipPerPerson] = useState<number | string>(0)
+  const[totalPerPerson, setTotalPerPerson] = useState<number | string>(0)
 
   useEffect(() => {
-      setPercentInDollars(bill * (selectedPercentage / 100))
-      setTipPerPerson(percentInDollars / numberOfPeople)
-      setTotalPerPerson((bill / numberOfPeople) + tipPerPerson)
-      
+    const calculatedPercentInDollars = bill * (selectedPercentage / 100);
+    const calculatedTipPerPerson = calculatedPercentInDollars / numberOfPeople;
+    const calculatedTotalPerPerson = (bill / numberOfPeople) + calculatedTipPerPerson;
+
+    if (!isNaN(calculatedTipPerPerson) && !isNaN(calculatedTotalPerPerson)) {
+      setTipPerPerson(calculatedTipPerPerson);
+      setTotalPerPerson(calculatedTotalPerPerson);
+    } else {
+      // Handle the case where they are not valid numbers
+      // You can set them to 0 or handle it differently based on your requirements
+      setTipPerPerson("0");
+      setTotalPerPerson("0");
+    }
+
   }, [bill, numberOfPeople, selectedPercentage])
+
 
   return (
     <div className="calculation__content">

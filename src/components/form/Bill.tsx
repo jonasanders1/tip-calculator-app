@@ -9,13 +9,25 @@ interface BillProps {
 const Bill: React.FC<BillProps> = ({setBill}) => {
   const [billTotal, setBillTotal] = useState(0)
 
+  // Function to handling the bill input
+  // ---> if the user deletes input, the billInput = NaN
+  // so we need to check for that and make sure it returns 0 if that happens
   const handleBill = (e : React.ChangeEvent<HTMLInputElement>) => {
-    setBillTotal(parseInt(e.target.value))
+    const billInput = e.target.value 
+    if(!isNaN(parseFloat(billInput))) {
+      setBillTotal(parseInt(billInput))
+    } else {
+      setBillTotal(0)
+    }
   }
 
   useEffect(() => {
-    setBill(billTotal)
-  },[billTotal])
+    if(typeof billTotal === 'number'){
+      setBill(billTotal)
+    } else {
+      setBill(0)
+    }
+  },[billTotal, setBill])
 
 
   return (

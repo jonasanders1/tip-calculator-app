@@ -11,17 +11,22 @@ const Tip: React.FC<TipProps> = ({setSelected}) => {
  
   // function for handling the input change
   const handleCustomTip = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setCustomTip(parseInt(e.target.value))
-    //setSelected(0)
+    const tipInput = e.target.value
+    if (!isNaN(parseFloat(tipInput))){
+      setCustomTip(parseInt(tipInput))
+    } else {
+      setCustomTip(0)
+    }
   }
 
   // Update the selected value whenever the selected value changes
   useEffect(()=> {
-    if (customTip == Number.NaN){
-      setCustomTip(0)
+    if (typeof customTip === 'number'){
+      setSelected(customTip)
+    } else {
+      setSelected(0)
     }
-    setSelected(customTip != Number.NaN ? customTip : 0)
-  }, [customTip])
+  }, [customTip, setSelected])
 
   return (
     <div className="tip__content">

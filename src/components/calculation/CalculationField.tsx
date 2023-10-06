@@ -3,7 +3,7 @@ import "./calculationField.css"
 
 interface CalculationProps{
     tipCategory: string
-    tipNumber: number
+    tipNumber: number | string
 }
 
 const CalculationField: React.FC<CalculationProps> = ({tipCategory, tipNumber}) => {
@@ -15,7 +15,7 @@ const CalculationField: React.FC<CalculationProps> = ({tipCategory, tipNumber}) 
         </div>
         <div className='calculation__amount'>
             <p className='dollar'>$</p>
-            <p className='total-tip'>{ tipNumber != Number.NaN ? tipNumber : 0}</p>
+            <p className='total-tip'>{tipNumber}</p>
         </div>
     </div>
   )
