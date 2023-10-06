@@ -2,29 +2,15 @@
 
 
 /* FORM */
-.form__container{
-    display: flex;
-    justify-content: center;
-    padding-top: 3rem;
-}
+
 .form__content{
-    height: 450px;
-    background-color: var(--White);
-    border-radius: 2rem;
-    padding: 3rem;
-    display: flex;
-    gap: 2rem;
-}
-.left-side__container{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    gap: 4rem;
 }
 
-
-
-
-/* CALCULATION */
-.calculation__content{
-    flex: 1;
-}
+@media screen and (max-width: 880px) {
+    .form__content{
+        gap: 1rem;
+    }
+  }

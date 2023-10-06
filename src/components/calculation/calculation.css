@@ -2,15 +2,13 @@
 
 
 .calculation__content{
-    height: 100%;
-    width: 400px;
     background-color: var(--Very-dark-cyan);
     border-radius: 1.2rem;
     padding: 3rem 2rem;
     display: flex;
+    width: 400px;
     flex-direction: column;
     justify-content: space-between;
-  
 }
 .reset__button{
     height: 50px;
@@ -23,3 +21,12 @@
     font-weight: var(--Font-bold);
     color: var(--Very-dark-cyan);
 }
+
+.reset__button:hover{
+    background-color: var(--Light-grayish-cyan);
+}
+@media screen and (max-width: 880px) {
+    .calculation__content{
+        height: 300px;
+    }
+  }

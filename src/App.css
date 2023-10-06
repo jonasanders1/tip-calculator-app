@@ -7,4 +7,31 @@
 .app{
   height: 100vh;
   width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.form{
+  margin-top: 3rem;
+  background-color: var(--White);
+  display: flex;
+  flex-direction: column;
+  border-radius: 2rem 2rem 0 0;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+@media screen and (max-width: 900px) {
+  .form{
+    gap: 2rem;
+  }
+}
+
+@media screen and (min-width: 880px) {
+  .form{
+    flex-direction: row;
+    max-width: 1000px;
+    border-radius: 2rem;
+
+  }
 }

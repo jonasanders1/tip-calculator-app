@@ -4,7 +4,6 @@ import "./calculation.css"
 const Calculation = () => {
   return (
     <div className="calculation__content">
-       
         <div>
             <CalculationField tipCategory="Tip Amount" tipNumber={40}/>
             <CalculationField tipCategory="Total" tipNumber={200}/>

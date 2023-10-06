@@ -1,6 +1,5 @@
 /* BILL */
 .bill__content{
-    width: max-content;
     display: flex;
     flex-direction: column;
     gap: .5rem;

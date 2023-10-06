@@ -9,6 +9,9 @@
     gap: 10px;
     margin-bottom: 10px;
 }
+.tip__label{
+    color: var(--Dark-grayish-cyan);
+}
 .input__button{
     width: 113.66px;
     border: none;
