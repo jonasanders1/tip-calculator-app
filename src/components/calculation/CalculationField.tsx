@@ -15,7 +15,7 @@ const CalculationField: React.FC<CalculationProps> = ({tipCategory, tipNumber}) 
         </div>
         <div className='calculation__amount'>
             <p className='dollar'>$</p>
-            <p className='total-tip'>{tipNumber}</p>
+            <p className='total-tip'>{ tipNumber != Number.NaN ? tipNumber : 0}</p>
         </div>
     </div>
   )

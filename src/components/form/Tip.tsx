@@ -17,7 +17,10 @@ const Tip: React.FC<TipProps> = ({setSelected}) => {
 
   // Update the selected value whenever the selected value changes
   useEffect(()=> {
-    setSelected(customTip)
+    if (customTip == Number.NaN){
+      setCustomTip(0)
+    }
+    setSelected(customTip != Number.NaN ? customTip : 0)
   }, [customTip])
 
   return (

@@ -17,7 +17,7 @@ const Bill: React.FC<BillProps> = ({setBill}) => {
     setBill(billTotal)
   },[billTotal])
 
-  
+
   return (
     <div className="bill__content">
         <label className="bill__label">Bill</label>
