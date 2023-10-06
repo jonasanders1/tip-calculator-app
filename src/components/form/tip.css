@@ -27,5 +27,14 @@
 .input__button::placeholder {
     color: var(--Dark-grayish-cyan);
     opacity: 1; /* Firefox */
-  }
+}
+
+.error__message{
+    font-size: 12px;
+    color: red;    
+}
+.error{
+    outline-color: red;
+    color: red;
+}
 

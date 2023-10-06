@@ -25,3 +25,7 @@
 .people__container{
     position: relative;
 }
+.error{
+    outline-color: red;
+    color: red;
+}

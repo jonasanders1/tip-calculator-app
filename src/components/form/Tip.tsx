@@ -8,12 +8,23 @@ interface TipProps {
 
 const Tip: React.FC<TipProps> = ({setSelected}) => {
   const [customTip, setCustomTip] = useState(0)
+  const [negativeError, setNegativeError] = useState(false)
+  const [errorMessage, setErrorMessage] = useState("")
  
+
   // function for handling the input change
   const handleCustomTip = (e: React.ChangeEvent<HTMLInputElement>) => {
     const tipInput = e.target.value
     if (!isNaN(parseFloat(tipInput))){
-      setCustomTip(parseInt(tipInput))
+      if(parseInt(tipInput) >= 0){
+        setSelected(parseInt(tipInput))
+        setNegativeError(false)
+        setErrorMessage("")
+      } else {
+        setNegativeError(true)
+        setErrorMessage("Hahaa, nice try!")
+        setSelected(0)
+      }
     } else {
       setCustomTip(0)
     }
@@ -30,8 +41,10 @@ const Tip: React.FC<TipProps> = ({setSelected}) => {
 
   return (
     <div className="tip__content">
-      {customTip}
-        <label className="tip__label">Select tip %</label>
+      <div style={{display:"flex", justifyContent:"space-between"}}>
+        <label className={`tip__label `}>Select tip %</label>
+        <p className="error__message">{errorMessage}</p>
+      </div>
         <div className="tip__container">
             <div className="button__group">
                 <TipButton label="5%" value={5} setSelected={setSelected}/>
@@ -42,7 +55,11 @@ const Tip: React.FC<TipProps> = ({setSelected}) => {
             <div className="button__group">
                 <TipButton label="25%" value={25} setSelected={setSelected}/>
                 <TipButton label="50%" value={50} setSelected={setSelected}/>
-                <input type="number" placeholder="Custom" className="input__button" onChange={(e) => handleCustomTip(e)}/>
+                <input 
+                  type="number"
+                  placeholder="Custom" 
+                  className={`input__button ${negativeError ? "error": ""}`}
+                  onChange={(e) => handleCustomTip(e)}/>
             </div>
         </div>
     </div>
