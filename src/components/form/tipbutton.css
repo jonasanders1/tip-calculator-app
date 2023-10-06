@@ -13,3 +13,7 @@
 .tip-button:hover{
     background-color: var(--Strong-cyan);
 }
+
+.selected-button{
+    background-color: red;
+}

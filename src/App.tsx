@@ -21,7 +21,14 @@ function App() {
           setBill={setBill} 
           setSelectedPercentage={setSelectedPercentage} 
           setNumberOfPeople={setNumberOfPeople}/>
-        <Calculation bill={bill} selectedPercentage={selectedPercentage} numberOfPeople={numberOfPeople}/>
+        <Calculation 
+          bill={bill} 
+          selectedPercentage={selectedPercentage} 
+          numberOfPeople={numberOfPeople}
+          setBill={setBill}
+          setSelectedPercentage={setSelectedPercentage}
+          setNumberOfPeople={setSelectedPercentage}
+        />
       </div>
     </div>  
   )
