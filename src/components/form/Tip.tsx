@@ -11,7 +11,6 @@ const Tip: React.FC<TipProps> = ({setSelected}) => {
   const [negativeError, setNegativeError] = useState(false)
   const [errorMessage, setErrorMessage] = useState("")
   // state for styling the selected button
-  const [buttonSelected, setButtonSelected] = useState<number | null>(null);
 
   // function for handling the input change
   const handleCustomTip = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -66,7 +65,7 @@ const Tip: React.FC<TipProps> = ({setSelected}) => {
           />
         </div>
       </div>
-      
+
     </div>
   )
 }
